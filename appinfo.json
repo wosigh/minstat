@@ -1,0 +1,9 @@
+{
+	"id": "de.hlavka.minstat",
+	"version": "1.0.1",
+	"vendor": "Tobias Hlavka",
+	"type": "web",
+	"main": "index.html",
+	"title": "MinStat",
+	"icon": "icon.png"
+}
