@@ -221,8 +221,10 @@ opus.Gizmo({
 					label: "",
 					type: "Palm.Mojo.Label",
 					l: 0,
+					w: 304,
 					t: 299,
-					h: 48
+					h: 48,
+					hAlign: "center"
 				},
 				{
 					name: "divider1",

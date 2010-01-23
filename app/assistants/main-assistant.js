@@ -118,7 +118,7 @@ MainAssistant.prototype = {
 							this.controller.get("lblStatus").update("");
 
 			}.bind(this), onFailure: function(response) {
-							this.controller.get("lblStatus").update("Service not Running! " + response);
+							this.controller.get("lblStatus").update("Service error! [not installed?]");
 			}.bind(this)
     });
 	},
@@ -212,7 +212,7 @@ MainAssistant.prototype = {
         method: 'getVersion',
         parameters: {subscribe:false, "":""},
         onSuccess: function(response) {
-					this.controller.get("lblVersion").update("MinStat V1.0 - Service V"+response.version.toString());
+					this.controller.get("lblVersion").update("MinStat V1.0.1 - Service V"+response.version.toString());
         }.bind(this), onFailure: function(response) {
 							this.controller.get("lblStatus").update("Service not Running! " + response);
 			}.bind(this)
