@@ -21,7 +21,9 @@ MainAssistant.prototype = {
 										"clockrateFurther": this.modSettings.clockrateFurther,
 			 							"freeMinutes": this.modSettings.freeMinutes,
 										"freeSMS": this.modSettings.freeSMS,
-										"payrollDay": this.modSettings.payrollDay};
+										"payrollDay": this.modSettings.payrollDay,
+										"countInAndOut": this.modSettings.countInAndOut
+};
 		myCookie.put(myObject);
 	},
 
@@ -34,14 +36,19 @@ MainAssistant.prototype = {
 			this.modSettings.freeMinutes = myObject.freeMinutes;
 			this.modSettings.freeSMS = myObject.freeSMS;
 			this.modSettings.payrollDay = myObject.payrollDay;
+			this.modSettings.countInAndOut = myObject.countInAndOut;
 		} else {
 			this.modSettings.clockrateFirst = 60;
 			this.modSettings.clockrateFurther = 60;
 			this.modSettings.freeMinutes = 100;
 			this.modSettings.freeSMS = 100;
 			this.modSettings.payrollDay = 1;
+			this.modSettings.countInAndOut = false;
 		}
 			this.controller.modelChanged(this.modSettings,this);
+			//this.controller.modelChanged(this.modInAndOut,this);
+			//this.controller.get("lblStatus").update("vval"+this.modInAndOut.countInAndOut);
+
 	},
 
 	btnRefreshTap: function(event, inSender) {
@@ -62,12 +69,15 @@ MainAssistant.prototype = {
 	},
 	datePickChange: function(event, inSender) {
 		this.saveSettings();
+		this.loadFromService();
 	},
 	intPickClockrateFirstChange: function(event, inSender) {
 		this.saveSettings();
+		this.loadFromService();
 	},
 	intPickClockrateFurtherChange: function(event, inSender) {
 		this.saveSettings();
+		this.loadFromService();
 	},
 
 	loadFromService: function(event, inSender) {
@@ -75,7 +85,13 @@ MainAssistant.prototype = {
         method: 'getSQLData',
         parameters: {subscribe:false, "cashday":this.modSettings.payrollDay,"clockrateFirst":this.modSettings.clockrateFirst,"clockrateFurther":this.modSettings.clockrateFurther},
         onSuccess: function(response) {
-							var cntSMS = response.SMS;
+							var cntSMS;
+							if (this.modSettings.countInAndOut === true) {
+								cntSMS = response.SMS+response.incomingSMS;
+							} else {
+								cntSMS = response.SMS;
+							}
+
 							var cntMins = response.minutes;
 
 							cntMins=this.roundNumber(cntMins,2);
@@ -212,7 +228,7 @@ MainAssistant.prototype = {
         method: 'getVersion',
         parameters: {subscribe:false, "":""},
         onSuccess: function(response) {
-					this.controller.get("lblVersion").update("MinStat V1.0.1 - Service V"+response.version.toString());
+					this.controller.get("lblVersion").update("MinStat V1.1.0 - Service V"+response.version.toString());
         }.bind(this), onFailure: function(response) {
 							this.controller.get("lblStatus").update("Service not Running! " + response);
 			}.bind(this)
@@ -225,6 +241,10 @@ MainAssistant.prototype = {
 		this.loadFromService();
 	},
 	integerPicker2Change: function(event, inSender) {
+		this.saveSettings();
+		this.loadFromService();
+	},
+	toggleInAndOutChange: function(event, inSender) {
 		this.saveSettings();
 		this.loadFromService();
 	}

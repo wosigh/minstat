@@ -13,7 +13,7 @@ opus.Gizmo({
 			ontap: "",
 			type: "Palm.Mojo.Scroller",
 			l: 0,
-			t: "50",
+			t: 452,
 			h: "100%",
 			styles: {
 				cursor: "move",
@@ -30,7 +30,7 @@ opus.Gizmo({
 				{
 					name: "group1",
 					dropTarget: true,
-					label: "Minutes used",
+					label: "Minutes",
 					type: "Palm.Mojo.Group",
 					l: 0,
 					t: "55",
@@ -123,7 +123,7 @@ opus.Gizmo({
 				{
 					name: "group2",
 					dropTarget: true,
-					label: "SMS (parts) sent",
+					label: "SMS",
 					type: "Palm.Mojo.Group",
 					l: 0,
 					t: 94,
@@ -323,6 +323,57 @@ opus.Gizmo({
 							t: 0,
 							styles: {
 								textAlign: "right"
+							}
+						}
+					]
+				},
+				{
+					name: "panel4",
+					layoutKind: "hbox",
+					dropTarget: true,
+					type: "Palm.Mojo.Panel",
+					l: "12",
+					w: "308",
+					t: 626,
+					h: 60,
+					styles: {
+						textAlign: ""
+					},
+					controls: [
+						{
+							name: "label1",
+							label: "INCLUDE INCOMING SMS",
+							type: "Palm.Mojo.Label",
+							l: 6,
+							w: 216,
+							t: 0,
+							b: "",
+							h: 24,
+							hAlign: "right",
+							vAlign: "center",
+							styles: {
+								textAlign: "left",
+								fontSize: "14px",
+								bgColor: "",
+								textColor: "#1E73BC"
+							}
+						},
+						{
+							name: "toggleInAndOut",
+							ontap: "toggleInAndOutTap",
+							modelName: "modSettings",
+							value: true,
+							valuePropertyName: "countInAndOut",
+							trueValue: true,
+							falseValue: false,
+							trueLabel: "Yes",
+							falseLabel: "No",
+							onchange: "toggleInAndOutChange",
+							type: "Palm.Mojo.ToggleButton",
+							l: 0,
+							t: 0,
+							styles: {
+								textAlign: "left"
 							}
 						}
 					]
