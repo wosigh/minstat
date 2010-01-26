@@ -1,4 +1,4 @@
-opus = {
+﻿opus = {
 	paths: {},
 	depends: [],
 	path: {
