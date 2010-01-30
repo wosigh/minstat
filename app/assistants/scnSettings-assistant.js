@@ -50,7 +50,7 @@ ScnSettingsAssistant.prototype = {
         method: 'getVersion',
         parameters: {subscribe:false, "":""},
         onSuccess: function(response) {
-					this.controller.get("lblVersion").update("MinStat V1.2.1 - Service V"+response.version.toString());
+					this.controller.get("lblVersion").update("MinStat V1.2.2 - Service V"+response.version.toString());
         }.bind(this), onFailure: function(response) {
 							this.controller.get("lblStatus").update("Service error [not installed?]");
 			}.bind(this)
