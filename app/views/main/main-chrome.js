@@ -53,7 +53,7 @@ opus.Gizmo({
 									l: 69,
 									w: "70",
 									t: 0,
-									h: 51
+									h: 55
 								},
 								{
 									name: "lblMinutes",
@@ -259,13 +259,13 @@ opus.Gizmo({
 				},
 				{
 					name: "htmlCredits",
-					content: "<table><tr><td><font size=\"2\">&copy; 2010 by Tobias Hlavka&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td><form action=\"https://www.paypal.com/cgi-bin/webscr\" method=\"post\"><input type=\"hidden\"name=\"cmd\" value=\"_s-xclick\">\n<input type=\"hidden\" name=\"hosted_button_id\"value=\"11298589\">\n<input type=\"image\"src=\"https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif\"border=\"0\" name=\"submit\" alt=\"PayPal - The safer, easier way to pay online!\">\n<img alt=\"\" border=\"0\"src=\"https://www.paypal.com/de_DE/i/scr/pixel.gif\"width=\"1\" height=\"1\">\n</form></td></tr></table><font size=\"2\">If you enjoy this application and find it useful, please consider a small donation to the developer for his efforts - just think about how much money you save by having this app ;-)  \n</font>\n<hr>\n<font size=\"2\">\n  \"Milky\"-Icons by <a href=\"http://min.frexy.com/article/milky_a_free_\n  vector_icon_set_part_1/\">MinTran</a><br>\n  Visit <a href=\"http://forums.precentral.net/homebrew-apps/226237-minstat.html\">this Precentral-Thread</a> for further information.<br><br>\n  The above values are for information only and without responsibility - they can be really really wrong if you e.g. did fully erase your device less than one month ago.\n</font>\n",
+					content: "<table><tr><td><font size=\"2\">&copy; 2010 by Tobias Hlavka&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td><form action=\"https://www.paypal.com/cgi-bin/webscr\" method=\"post\"><input type=\"hidden\"name=\"cmd\" value=\"_s-xclick\">\n<input type=\"hidden\" name=\"hosted_button_id\"value=\"11298589\">\n<input type=\"image\" src=\"https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif\" border=\"0\" name=\"submit\" alt=\"Donate\">\n<img alt=\"\" border=\"0\"src=\"https://www.paypal.com/de_DE/i/scr/pixel.gif\" width=\"1\" height=\"1\">\n</form></td></tr></table><font size=\"2\">If you find this app useful, please consider a small donation to the developer for the effort he put into it - just think about how much money you save by having this app ;-)  \n</font>\n<hr>\n<font size=\"2\">\n  App icon by <a href=\"http://www.clickfisch.net\">Jan Schohaus</a><br>\n  SMS&Call icons by <a href=\"http://min.frexy.com/article/milky_a_free_\n  vector_icon_set_part_1/\">MinTran</a><br>\n  Visit <a href=\"http://forums.precentral.net/homebrew-apps/226237-minstat.html\">this Precentral-Thread</a> for further information.<br><br>\n  The above values are for information only and without responsibility - they can be really really wrong if you e.g. did fully erase your device less than one month ago.\n</font>\n",
 					type: "Palm.Mojo.Html",
 					l: 0,
 					w: "95%",
-					t: 419,
+					t: 359,
 					b: "",
-					h: 235,
+					h: "245",
 					hAlign: "center"
 				}
 			]

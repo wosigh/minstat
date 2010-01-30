@@ -22,7 +22,7 @@ opus.Gizmo({
 			controls: [
 				{
 					name: "header1",
-					label: "MinStat - settings",
+					label: "MinStat - Settings",
 					type: "Palm.Mojo.Header",
 					l: 0,
 					t: -1
@@ -177,14 +177,22 @@ opus.Gizmo({
 					label: "",
 					type: "Palm.Mojo.Label",
 					l: 0,
-					w: 301,
+					w: 296,
 					t: 398,
 					h: 19,
 					hAlign: "center",
 					vAlign: "center",
 					styles: {
-						fontSize: "12px"
+						fontSize: "12px",
+						textAlign: "center"
 					}
+				},
+				{
+					name: "button1",
+					ontap: "button1Tap",
+					type: "Palm.Mojo.Button",
+					l: 0,
+					t: 369
 				},
 				{
 					name: "divider4",

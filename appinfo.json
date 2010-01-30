@@ -1,6 +1,6 @@
 {
 	"id": "de.hlavka.minstat",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"vendor": "Tobias Hlavka",
 	"type": "web",
 	"main": "index.html",
