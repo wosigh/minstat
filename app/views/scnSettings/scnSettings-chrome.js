@@ -188,13 +188,6 @@ opus.Gizmo({
 					}
 				},
 				{
-					name: "button1",
-					ontap: "button1Tap",
-					type: "Palm.Mojo.Button",
-					l: 0,
-					t: 369
-				},
-				{
 					name: "divider4",
 					showing: false,
 					label: "Credits",
